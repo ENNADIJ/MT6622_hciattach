@@ -1,0 +1,90 @@
+1|root@android:/data/local/tmp # hciattach -n -t10 -s 115200 /dev/ttyS0 mtk    
+Function address: 0x4020e09c 0x4020e630
+QUA
+QUi
+mtk.c 442
+LOG
+bt_read_nv
+Read NVRAN 96
+letto  NVRAN
+memcpy  NVRAN
+return  NVRAN
+PRIMA IFDEF Device
+[BDAddr 23-20-62-63-6d-39][CapId 34][LinkKeyType 33]             [UintKey 31 39 77 6c 75 73 62 6e 34 6c 20 62 6f 61 72 64]             [Encryption 0a 23 20][PinCodeType 24][Voice 43 6f][Codec 70 79 72 69]             [Radio 67 68 74 20 28 43][Sleep 29 20 32 30 30 38 20][BtFTR 42 72][TxPWOffset 6f 61 64]             [ECLK_SEL 63]
+Init Device
+BT_InitDevice
+BT load firmware patch
+Open /system/etc/firmware/MTK_MT6622_E2_Patch.nb0
+Patch file size 7464
+Rewinded
+GORM_INIT
+GORM_Init
+GORMcmd_HCC_Read_Local_Version
+OpCode 0x1001 len 0
+GORMcmd_HCC_Simulate_MT6612
+OpCode 0xfccc len 1
+GORMcmd_HCC_Fix_UART_Escape
+OpCode 0xfcd0 len 8
+GORMcmd_HCC_GetHwVersion
+OpCode 0xfcd1 len 4
+GORMcmd_HCC_GetGormVersion
+OpCode 0xfcd1 len 4
+Host baud 115200 HCI_VS_UART_CONFIG 01 77 fc 02 08 00
+>>>BT_SetBaudRate: Host baud 1500000 HCI_VS_UART_CONFIG 01 77 fc 06 00 00 60 e3 16 00
+setup_uart_param 115200 0
+standard baudrate: 115200 -> 0x00001002
+>>>set_speed: standard baudrate: 1500000 -> 0x0000100a
+
+Can't set serial_struct: Invalid argument
+Download patch success
+GORMcmd_HCC_Set_Local_BD_Addr
+Use Nvram BD address
+Write BD address: 23-20-62-63-6d-39
+OpCode 0xfc1a len 6
+GORMcmd_HCC_Set_CapID
+OpCode 0xfc7f len 1
+GORMcmd_HCC_Set_LinkKeyType
+OpCode 0xfc1b len 1
+GORMcmd_HCC_Set_UnitKey
+OpCode 0xfc75 len 16
+GORMcmd_HCC_Set_Encryption
+OpCode 0xfc76 len 3
+GORMcmd_HCC_Set_PinCodeType
+OpCode 0x0c0a len 1
+GORMcmd_HCC_Set_Voice
+OpCode 0x0c26 len 2
+GORMcmd_HCC_Set_PCM
+OpCode 0xfc72 len 4
+GORMcmd_HCC_Set_Radio
+OpCode 0xfc79 len 6
+GORMcmd_HCC_Set_Sleep_Timeout
+OpCode 0xfc7a len 7
+GORMcmd_HCC_Set_BT_FTR
+OpCode 0xfc7d len 2
+GORMcmd_HCC_Set_Chip_Feature
+OpCode 0xfc1e len 8
+GORMcmd_HCC_Set_OSC_Info
+OpCode 0xfc7b len 5
+GORMcmd_HCC_Set_LPO_Info
+OpCode 0xfc7c len 10
+GORMcmd_HCC_Set_RF_Desense
+OpCode 0xfc20 len 6
+GORMcmd_HCC_Set_PTA
+OpCode 0xfc74 len 10
+GORMcmd_HCC_RESET
+OpCode 0x0c03 len 0
+GORMcmd_HCC_Enable_PTA
+OpCode 0xfcd2 len 1
+GORMcmd_HCC_Set_WiFi_Ch
+OpCode 0xfcd3 len 2
+GORMcmd_HCC_Set_AFH_Mask
+OpCode 0x0c3f len 10
+GORMcmd_HCC_Set_Sleep_Control_Reg
+GORMcmd_HCC_Set_FW_Reg
+OpCode 0xfcd0 len 8
+mtk() success
+Device setup complete
+^CMTK BT chip deinit
+mtk.c 529
+BT_DeinitDevice
+
